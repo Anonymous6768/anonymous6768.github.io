@@ -23,6 +23,8 @@ body{
   color: white;
   height: 80px;
   font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 .navbar_menu {
   display: flex;
