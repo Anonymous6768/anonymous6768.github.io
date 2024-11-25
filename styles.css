@@ -3,23 +3,30 @@ body{
 }
 .navbar {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .navbar_container {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  top: 0;
+  height: 80px;
 }
 .navbar_home {
   color: white; 
-  font-size: 100%;
   font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
+  font-size: 2rem;
 }
 .navbar_item{
   border: 2px white;
   padding: 10px;
   color: white;
-  font-size: 100%;
+  height: 80px;
   font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
+}
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
