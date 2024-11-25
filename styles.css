@@ -1,5 +1,11 @@
 body{
-  background-color: black;
+  color: black;
+}
+*{
+  box-sizing: border-boz;
+  margin: 0;
+  padding: 0;
+  font-faming: 'Kumbh Sans', sans-serif;
 }
 .navbar {
   background: #131313;
