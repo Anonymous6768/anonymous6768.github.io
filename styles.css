@@ -8,11 +8,23 @@ body{
   align-items: center;
 }
 .home {
+  border: 2px white;
+  padding: 10px;
   color: white; 
+  font-size: 100%;
+  font-family: comic sans;
 }
 .games{
+  border: 2px white;
+  padding: 10px;
   color: white;
+  font-size: 100%;
+  font-family: comic sans;
 }
 .proxies{
+  border: 2px white;
+  padding: 10px;
   color: white;
+  font-size: 100%;
+  font-family: comic sans;
 }
