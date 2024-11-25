@@ -7,24 +7,19 @@ body{
   justify-content: center;
   align-items: center;
 }
-.home {
-  border: 2px white;
-  padding: 10px;
+.navbar__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar_logo {
   color: white; 
   font-size: 100%;
   font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
 }
-.games{
+.navbar_item{
   border: 2px white;
   padding: 10px;
   color: white;
   font-size: 100%;
   font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
-}
-.proxies{
-  border: 2px white;
-  padding: 10px;
-  color: white;
-  font-size: 100%;
-  font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
-}
