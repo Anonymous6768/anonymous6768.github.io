@@ -1,12 +1,18 @@
+body{
+  background-color: black;
+}
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.mainpage {
-  font-size: 80px;
+.home {
+  color: white; 
 }
 .games{
-font-szie: 80px;
+  color: white;
+}
+.proxies{
+  color: white;
 }
