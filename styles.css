@@ -1,4 +1,6 @@
-
+body{
+  background-color: black;
+}
 .navbar {
   display: flex;
   flex-direction: row;
