@@ -6,6 +6,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -14,20 +15,22 @@ body{
   display: flex;
   justify-content: space-between;
   height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 .navbar_home {
   color: white; 
-  font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
+  font-faming: 'Kumbh Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   font-size: 2rem;
 }
 .navbar_item{
-  border: 2px white;
-  padding: 10px;
-  color: white;
   height: 80px;
-  font-family: "Brush Script MT", "Lucida Handwriting", sans-serif;
-  justify-content: center;
-  align-items: center;
 }
 .navbar_menu {
   display: flex;
