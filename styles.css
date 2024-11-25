@@ -2,18 +2,20 @@ body{
   background-color: black;
 }
 .navbar {
+  background: #131313;
   height: 80px;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
 }
+
 .navbar_container {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -21,12 +23,16 @@ body{
   margin: 0 auto;
   padding: 0 50px;
 }
-.navbar_item{
-  height: 80px;
-}
+
+
+
 .navbar_menu {
   display: flex;
   align-items: center;
   list-style: none;
   text-align: center;
+}
+
+.navbar_item {
+  height: 80px;
 }
