@@ -4,7 +4,7 @@ body{
 .navbar {
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -20,14 +20,6 @@ body{
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 50px;
-}
-.navbar_home {
-  color: white; 
-  font-faming: 'Kumbh Sans', sans-serif;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 2rem;
 }
 .navbar_item{
   height: 80px;
