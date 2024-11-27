@@ -1,1 +1,6 @@
-
+.games_grid{
+  display: felx;
+  flex-direction: grid;
+  align-items: center;
+  justify-content: center;
+}
