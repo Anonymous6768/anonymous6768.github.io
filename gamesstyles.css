@@ -6,5 +6,8 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 540px;
+  height: 1024px;
+}
+.grid_item{
+height: 128px;
 }
