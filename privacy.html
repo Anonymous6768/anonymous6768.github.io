@@ -5,48 +5,67 @@
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
     <title id="tab-title">Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/global.css?v=6" />
-    <link rel="stylesheet" href="/assets/css/container.css?v=2" />
     <link rel="stylesheet" href="/assets/css/nav.css?v=2" />
-    <script src="/assets/js/index.js?v=46"></script>
+    <script src="assets/js/fa.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
      crossorigin="anonymous"></script>
 
   </head>
   <body>
+    <style>
+      .c-container {
+        position: fixed;
+        top: 15%;
+        left: 5%;
+        width: 90%;
+        height: 80vh;
+        border-radius: 15px;
+        color: var(--text-primary);
+      }
+
+      .c-container h3 {
+        position: fixed;
+        top: 10%;
+        font-size: 45px;
+      }
+
+      .c-container p {
+        position: fixed;
+        top: 22%;
+        font-size: 15px;
+        color: gray;
+      }
+
+      .card {
+        padding: 10px;
+        background-color: var(--background-settings);
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
     <div class="fixed-nav-bar"></div>
-    <div class="input-container">
-      <input
-        type="text"
-        id="searchbarbottom"
-        onkeyup="searchBar()"
-        placeholder="Search"
-      />
-      <select id="category" name="category" onchange="showCategory()">
-        <option value="all">All</option>
-        <option value="android">Android Emulator</option>
-        <option value="2P">Multiplayer</option>
-        <option value="sports">Sports</option>
-        <option value="flash">Flash</option>
-        <option value="emu">Emulator</option>
-        <option value="local">Local</option>
-      </select>
+    <div class="c-container">
+      <div class="card">
+        <h3>Privacy Policy</h3>
+        <p>Last Updated: April 19th, 2024.</p>
+        <!--some day we gotta add it-->
+      </div>
     </div>
-    <div class="pinned-apps"></div>
-    <div class="container-apps"></div>
-    <script src="/assets/js/container.js?v=126"></script>
-    <script src="./assets/-uv/bundle.js?v=6-17-2024"></script>
-    <script src="./assets/-uv/config.js?v=6-17-2024"></script>
-    <script src="assets/js/fa.js"></script>
     <script src="/assets/js/main.js?v=02"></script>
+    <!-- DO NOT REMOVE-->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"
     ></script>
-    <!-- DO NOT REMOVE-->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -57,6 +76,5 @@
       gtag("config", "G-WKJQ5QHQTJ");
     </script>
     <!-- DO NOT REMOVE-->
-   
   </body>
 </html>
