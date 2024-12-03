@@ -1,1 +1,9 @@
-
+.proxies_grid{
+  display: flex;
+  flex-direction: grid;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
