@@ -1,16 +1,21 @@
 </head>
 <script type="text/javascript">        
 function display(form){       
-		if (form.password.value=="donkeykong") {              
+	if(form.username.value=="whatthesigma"){
+		if (form.password.value=="arrasforlife") {              
 										location="mainpage.html" 
 											} else {
 													alert("Invalid Password")
 													}
-								} 
+								}else {
+													alert("Invalid Username")
+													} 
+}
 			</script>			
 <body >
 
 <form >
+<input type="username" name="username"/><br><br>
 <input type="password" name="password"/><br><br>
 <input type="button" value="Login" onClick="display(this.form)"/>
 
