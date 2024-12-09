@@ -23,3 +23,16 @@ body{
   margin: 0 auto;
   padding: 0 50px;
 }
+
+
+
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar_item {
+  height: 80px;
+}
