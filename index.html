@@ -13,11 +13,33 @@ function display(form){
 													} 
 }
 			</script>
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+
 <body >
 	<div class="imgcontainer">
 		<img src="profile.png">
 	</div>
-	<div class="form">
+	<div class="container" alt="profile" class="profile">
 <form >
 Username:<input type="username" name="username"/><br><br>
 Password:<input type="password" name="password"/><br><br>
