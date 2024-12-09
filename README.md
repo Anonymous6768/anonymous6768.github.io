@@ -1,4 +1,4 @@
 
 ## Update 1.1
--Login page has a new, fresh look! 
--Login bypass patched
+- Login page has a new, fresh look! 
+- Login bypass patched
