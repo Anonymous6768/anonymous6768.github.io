@@ -33,11 +33,13 @@
 .navbar-left {
     display: flex;
     align-items: center;
+  float: left;
 }
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 8px;
+  float: right;
 }
 .nav-text {
     color: white;
