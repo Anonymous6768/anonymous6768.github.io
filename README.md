@@ -1,5 +1,5 @@
 
 ## Update 1.1
-- Login page has a new, fresh look!
+- Login page and main page have a new, fresh look!
 - Login bypass patched
-- Navbar buttons changed
+- Navbar updated
