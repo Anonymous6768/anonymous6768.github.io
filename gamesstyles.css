@@ -4,3 +4,11 @@
     justify-content: center; 
     gap: 20px; 
 }
+.grid-item {
+    position: relative;
+    width: 200px;
+    height: 170px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
