@@ -28,6 +28,7 @@
     width: 40px;
     height: 40px;
     margin-right: 10px;
+  float: left;
 }
 
 .navbar-left {
@@ -45,9 +46,11 @@
     color: white;
     font-size: 18px;
     margin: 0;
+  float: left
 }
 .navbar_item {
   height: 80px;
+  float: right;
 }
 .main {
   background-color: #222222;
