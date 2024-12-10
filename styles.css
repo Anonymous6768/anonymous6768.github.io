@@ -23,13 +23,20 @@
 
 
 
-.navbar_menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
+.navbar-left {
+    display: flex;
+    align-items: center;
 }
-
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nav-text {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
 .navbar_item {
   height: 80px;
 }
