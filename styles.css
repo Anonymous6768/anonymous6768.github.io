@@ -39,7 +39,7 @@ body{
 .main {
   background-color: #141414;
 }
-.main_container h1 {
+.main_content h1 {
   font-size: 4rem;
   background-color: #ff8177;
   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
@@ -50,7 +50,7 @@ body{
   -moz-text-fill-color: transparent;
 }
 
-.main_container h2 {
+.main_content h2 {
   font-size: 4rem;
   background-color: #ff8177;
   background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
@@ -60,7 +60,7 @@ body{
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-.main {
+.main_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
