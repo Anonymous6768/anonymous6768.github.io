@@ -1,9 +1,8 @@
 <html>   
 <body>
-<p id="message">Chat:</p>
 <script>
 		function addItem(){
-			 document.getElementById("message").innerHTML += form.message.value;
+			 document.getElementById("block").innerHTML += "<div>item</div>";
 		}
 </script>
 	
@@ -11,5 +10,6 @@
 <input type="text" name="message"/><br><br>
 <input type="button" id="button" onclick="addItem()"/>
 </form>
+<div id="block"></div>
 </body>
 </html>
