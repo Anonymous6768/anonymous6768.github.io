@@ -1,17 +1,11 @@
 
 <html>   
 <body >
-	<script>
-	let x = 0;
-	while(x < 1000){
-		x++;
-	}
-	</script>
-	<p id=x></p>
+	<p id="message"></p>
 	
 <form >
 <input type="text" name="message"/><br><br>
-<input type="button" value="Send" onClick="document.getElementById(x).innerHTML = form.message.value"/>
+<input type="button" value="Send" onClick="document.getElementById('message').innerHTML = form.message.value"/>
 </form>
 	</div>
 </body>
