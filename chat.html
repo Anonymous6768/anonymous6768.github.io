@@ -1,14 +1,10 @@
 
 <html>   
-<?php
-$txt1 = form.message.value;
-
-echo "<p>$txt1</p>";
-?>
 <body >
+	<p id="message"></p>
 <form >
 <input type="text" name="message"/><br><br>
-<button type="submit">Send</button>
+<input type="button" value="Send" onClick="document.getElementById('message').innerHTML=form.message.value"/>
 </form>
 	</div>
 </body>
