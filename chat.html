@@ -1,10 +1,17 @@
 
 <html>   
 <body >
-	<p id="message"></p>
+	<script>
+	let x = 0;
+	while(true){
+		x++;
+	}
+	</script>
+	<p id=x></p>
+	
 <form >
 <input type="text" name="message"/><br><br>
-<input type="button" value="Send" onClick="document.getElementById('message').innerHTML = form.message.value"/>
+<input type="button" value="Send" onClick="document.getElementById(x).innerHTML = form.message.value"/>
 </form>
 	</div>
 </body>
