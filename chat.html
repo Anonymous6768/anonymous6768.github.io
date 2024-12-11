@@ -2,15 +2,15 @@
 <html>
 <script type="text/javascript">        
 function display(form){       
-  document.getElementById("demo").innerHTML = form.username.value;
+  document.getElementById("demo").innerHTML = form.message.value;
 			</script>
 <p id="demo"></p>
 
 
 <body >
 <form >
-Username:<input type="text" name="username"/><br><br>
-<input type="button" value="Login" onClick="display(this.form)"/>
+Username:<input type="text" name="message"/><br><br>
+<input type="button" value="Send" onClick="document.write(form.message.value)"/>
 
 </form>
 	</div>
