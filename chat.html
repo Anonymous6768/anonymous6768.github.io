@@ -2,7 +2,7 @@
 <body>
 <script>
 		function addItem(){
-			 document.getElementById("block").innerHTML += "<div>item</div>";
+			 document.getElementById("block").innerHTML += form.message.value;
 		}
 </script>
 	
@@ -10,6 +10,6 @@
 <input type="text" name="message"/><br><br>
 <input type="button" id="button" onclick="addItem()"/>
 </form>
-<div id="block">List of items:</div>
+<div id="block">Chat:</div>
 </body>
 </html>
