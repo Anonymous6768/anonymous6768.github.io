@@ -1,9 +1,10 @@
 
 <html>   
-<p id="message"></p>
-<script type="text/javascript">     
-document.getElementById("message").innerHTML = form.message.value
-	</script>
+<?php
+$txt1 = form.message.value;
+
+echo "<p>$txt1</p>";
+?>
 <body >
 <form >
 <input type="text" name="message"/><br><br>
