@@ -2,11 +2,8 @@
 <body>
 <form >
 <input type="text" name="message"/><br><br>
-<input type="button" value="Send" onclick="document.getElementById('chat').innerHTML += form.message.value"/>
+<input type="button" value="Send" onclick="document.getElementById('chat').innerHTML += form.message.value '<br>'"/>
 </form>
 <div id="chat"></div>
-<?php
-echo "<br>";
-?>
 </body>
 </html>
