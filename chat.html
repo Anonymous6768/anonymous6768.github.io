@@ -5,7 +5,8 @@
 <input type="text" name="message"/><br><br>
 <input type="button" value="Send" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
-  document.getElementById("chat").innerHTML += "<br>";'/>
+  document.getElementById("chat").innerHTML += "<br>";
+  localStorage.lastname = form.message.value;'/>
 </form>
 </body>
 </html>
