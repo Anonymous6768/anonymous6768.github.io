@@ -1,8 +1,10 @@
 <html>   
 <body>
-<form >
+<form>
 <input type="text" name="message"/><br><br>
-<input type="button" value="Send" onclick="document.getElementById('chat').innerHTML += form.message.value '<br>'"/>
+<input type="button" value="Send" onclick='
+  document.getElementById("chat").innerHTML += form.message.value;
+  document.getElementById("chat").innerHTML += "<br>";'/>
 </form>
 <div id="chat"></div>
 </body>
