@@ -1,6 +1,6 @@
 const userInput = document.getElementById('user-input');
 var wsUrl = 'ws://' + window.location.host 
-var ws = new WebSocket(wsUrl + '/data')
+var ws = new WebSocket(wsUrl + '/data/websocket')
 
 ws.onmessage = function(e) {
   console.log(e.data)
