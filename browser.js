@@ -1,3 +1,4 @@
+const userInput = document.getElementById('user-input');
 var wsUrl = 'ws://' + window.location.host 
 var ws = new WebSocket(wsUrl + '/data')
 
@@ -7,7 +8,7 @@ ws.onmessage = function(e) {
 
 ws.onopen = function() {
   console.log('opening...')
-  ws.send(form.message.value)
+  ws.send(userInput)
 }
 
 ws.onerror = function(error) {
