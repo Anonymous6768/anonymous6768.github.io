@@ -1,12 +1,15 @@
 <html>   
 <body>
-  <ul id="messages"></ul>
-<form id="form">
-<input type="text" id="input" name="message"/><br><br>
-<input type="button" value="Send" id="send-button"/>
+  <div id="chat"></div>
+<form>
+<input type="text" id="user-input" name="message"/><br><br>
+<input type="button" value="Send" id="send-button" onclick='
+  document.getElementById("chat").innerHTML += form.message.value;
+  document.getElementById("chat").innerHTML += "<br>";
+  sendMessage();'/>
 </form>
   <script>
-let counter = 0;
+    let counter = 0;
 
     const socket = io({
       auth: {
@@ -15,30 +18,37 @@ let counter = 0;
       ackTimeout: 10000,
       retries: 3,
     });
+const input = document.getElementById('user-input');
 
-    const form = document.getElementById('form');
-    const input = document.getElementById('input');
-    const messages = document.getElementById('messages');
+function sendMessage() {
+socket.onopen = function(e) {
+  e.preventDefault();
+  if(input.value){
+  alert("Message Sent");
+  socket.emit('chat message', input.value, clientOffset);
+  }
+};
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (input.value) {
-        const clientOffset = `${socket.id}-${counter++}`;
-        socket.emit('chat message', input.value, clientOffset);
-        input.value = '';
-      }
-    });
+socket.onmessage = ('chat message', (msg, serverOffset) => {
+  const item = document.createElement('li');
+  item.textContent = msg;
+  socket.auth.serverOffset = serverOffset;
+};
 
-    socket.on('chat message', (msg, serverOffset) => {
-      const item = document.createElement('li');
-      item.textContent = msg;
-      messages.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
-      socket.auth.serverOffset = serverOffset;
-    });
-    
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error]`);
+};
+}
+
 </script>
-  <script src="index.js"></script>
   <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
