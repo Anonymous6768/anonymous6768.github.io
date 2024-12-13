@@ -2,7 +2,7 @@
 <body>
   <div id="chat"></div>
 <form>
-<input type="text" id="user-input" name="message"/><br><br>
+<input type="text" id="input" name="message"/><br><br>
 <input type="button" value="Send" id="send-button" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
   document.getElementById("chat").innerHTML += "<br>";
@@ -10,7 +10,7 @@
 </form>
   <script>
 let socket = new WebSocket("ws://localhost:8080/echo/websocket");
-const userInput = document.getElementById('user-input');
+const userInput = document.getElementById('input');
 
 function sendMessage() {
 socket.onopen = function(e) {
@@ -40,5 +40,6 @@ socket.onerror = function(error) {
     
 </script>
   <script src="server.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
