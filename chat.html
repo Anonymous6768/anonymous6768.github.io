@@ -8,7 +8,7 @@
   document.getElementById("chat").innerHTML += "<br>";'/>
 </form>
   <script>
-let socket = new WebSocket("wss://javascript.info/article/websocket/demo/hello");
+let socket = new WebSocket("ws://localhost:8080/echo/websocket");
 const userInput = document.getElementById('user-input');
     
 socket.onopen = function(e) {
