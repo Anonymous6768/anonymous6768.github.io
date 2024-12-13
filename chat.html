@@ -5,22 +5,25 @@
 <input type="text" id="user-input" name="message"/><br><br>
 <input type="button" value="Send" id="send-button" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
-  document.getElementById("chat").innerHTML += "<br>";'/>
+  document.getElementById("chat").innerHTML += "<br>";
+  sendMessage();'/>
 </form>
   <script>
 let socket = new WebSocket("ws://ws://localhost:8080/echo/websocket");
 const userInput = document.getElementById('user-input');
-const sendButton = document.getElementById('send-button');
 
-async function sendMessage() {
+function sendMessage() {
 socket.onopen = function(e) {
+  const userMessage = userInput.value.trim();
   alert("[open] Connection established");
   alert("Sending to server");
-  socket.send(userInput);
+  socket.send(userMessage);
 };
 
 socket.onmessage = function(event) {
-  alert(`[message] ${event.data}`);
+  const userMessage = userInput.value.trim();
+  const typingIndicator = document.createElement('p');
+  typingIndicator.innerHTML = 'userMessage';
 };
 
 socket.onclose = function(event) {
@@ -36,7 +39,6 @@ socket.onerror = function(error) {
 };
 }
     
-sendButton.addEventListener('click', sendMessage);
 </script>
   <script src="server.js"></script>
 </body>
