@@ -9,14 +9,13 @@
   sendMessage();'/>
 </form>
   <script>
-let socket = new WebSocket("ws://ws://localhost:8080/echo/websocket");
+let socket = new WebSocket("ws://localhost:8080/echo/websocket");
 const userInput = document.getElementById('user-input');
 
 function sendMessage() {
 socket.onopen = function(e) {
   const userMessage = userInput.value.trim();
-  alert("[open] Connection established");
-  alert("Sending to server");
+  alert("Connection established");
   socket.send(userMessage);
 };
 
