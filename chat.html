@@ -10,7 +10,9 @@
   <script>
 let socket = new WebSocket("ws://localhost:8080/echo/websocket");
 const userInput = document.getElementById('user-input');
-    
+const sendButton = document.getElementById('send-button');
+
+async function sendMessage() {
 socket.onopen = function(e) {
   alert("[open] Connection established");
   alert("Sending to server");
@@ -32,6 +34,9 @@ socket.onclose = function(event) {
 socket.onerror = function(error) {
   alert(`[error]`);
 };
+}
+    
+sendButton.addEventListener('click', sendMessage);
 </script>
 </body>
 </html>
