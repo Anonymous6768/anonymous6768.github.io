@@ -9,11 +9,12 @@
 </form>
   <script>
 let socket = new WebSocket("wss://javascript.info/article/websocket/demo/hello");
-
+const userInput = document.getElementById('user-input');
+    
 socket.onopen = function(e) {
   alert("[open] Connection established");
   alert("Sending to server");
-  socket.send(form.message.value);
+  socket.send(userInput);
 };
 
 socket.onmessage = function(event) {
