@@ -3,7 +3,7 @@
   <div id="chat"></div>
 <form>
 <input type="text" id="user-input" name="message"/><br><br>
-<input type="button" value="Send" onclick='
+<input type="button" value="Send" id="send-button" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
   document.getElementById("chat").innerHTML += "<br>";'/>
 </form>
