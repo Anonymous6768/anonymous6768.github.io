@@ -1,57 +1,35 @@
 <html>   
 <body>
-  <div id="chat"></div>
+  <div id="messages"></div>
   <script>
-    function display(form){
-      alert(form.message.value);
-    }
+      const socket = new WebSocket('ws://localhost:8080');
+
+      socket.addEventListener('open', 
+      () => {
+      console.log('Connected to server');
+      });
+
+      socket.addEventListener('message', 
+      (event) => {
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = event.data;
+      document.getElementById('messages').appendChild(messageDiv);
+      });
+
+      document.getElementById('sendButton').addEventListener('click', 
+      () => {
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+      socket.send(message);
+      messageInput.value = '';
+      });
   </script>
 <form>
 <input type="text" id="input" name="message"/><br><br>
-<input type="button" value="Send" id="send-button" onclick='
-  document.getElementById("chat").innerHTML += form.message.value;
-  document.getElementById("chat").innerHTML += "<br>";
-  display(this.form);'/>
+<input type="button" value="Send" id="sendButton" onclick='
+  document.getElementById("messages").innerHTML += form.message.value;
+  document.getElementById("messages").innerHTML += "<br>";'/>
 </form>
-  <script>
-    let counter = 0;
-
-    const socket = io({
-      auth: {
-        serverOffset: 0
-      },
-      ackTimeout: 10000,
-      retries: 3,
-    });
-const input = document.getElementById('user-input');
-
-socket.onopen = function(e) {
-  e.preventDefault();
-  if(input.value){
-  alert("Message Sent");
-  socket.emit('chat message', input.value, clientOffset);
-  }
-};
-
-socket.onmessage = ('chat message', (msg, serverOffset) => {
-  const item = document.createElement('li');
-  item.textContent = msg;
-  socket.auth.serverOffset = serverOffset;
-};
-
-socket.onclose = function(event) {
-  if (event.wasClean) {
-    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
-  } else {
-    alert('[close] Connection died');
-  }
-};
-
-socket.onerror = function(error) {
-  alert(`[error]`);
-};
-
-</script>
   <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
