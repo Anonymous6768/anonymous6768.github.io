@@ -1,12 +1,17 @@
 <html>   
 <body>
   <div id="chat"></div>
+  <script>
+    function display(form){
+      alert("Message Sent");
+    }
+  </script>
 <form>
 <input type="text" id="user-input" name="message"/><br><br>
 <input type="button" value="Send" id="send-button" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
   document.getElementById("chat").innerHTML += "<br>";
-  sendMessage();'/>
+  display(this.form);'/>
 </form>
   <script>
     let counter = 0;
@@ -20,7 +25,6 @@
     });
 const input = document.getElementById('user-input');
 
-function sendMessage() {
 socket.onopen = function(e) {
   e.preventDefault();
   if(input.value){
@@ -46,7 +50,6 @@ socket.onclose = function(event) {
 socket.onerror = function(error) {
   alert(`[error]`);
 };
-}
 
 </script>
   <script src="/socket.io/socket.io.js"></script>
