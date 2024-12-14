@@ -2,12 +2,13 @@
 <body>
   <div id="chat"></div>
   <script>
+    const input = document.getElementById('input');
     function display(form){
-      alert("Message Sent");
+      alert(input);
     }
   </script>
 <form>
-<input type="text" id="user-input" name="message"/><br><br>
+<input type="text" id="input" name="message"/><br><br>
 <input type="button" value="Send" id="send-button" onclick='
   document.getElementById("chat").innerHTML += form.message.value;
   document.getElementById("chat").innerHTML += "<br>";
