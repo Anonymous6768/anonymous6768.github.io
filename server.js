@@ -1,17 +1,11 @@
-var PORT = 8080
+import { WebSocketServer } from 'ws'
 
-var server = http.createServer()
+const wss = new WebSocketServer({ port: 8080 })
 
-var sockjs = require('sockjs')
-var wss = sockjs.createServer()
-wss.on('connection', function(ws) {
-  ws.on('data', function(data) {
-    ws.write('from server: ' + data)
+wss.on('connection', function connection(ws) {
+  ws.on('message', function message(data) {
+    console.log('received: %s', data)
   })
-  ws.on('close', function() {
-    console.log('close')
-  })
+
+  ws.send('something')
 })
-
-wss.installHandlers(server, {prefix: '/data'})
-server.listen(PORT)
