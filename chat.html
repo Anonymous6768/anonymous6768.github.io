@@ -5,7 +5,9 @@
       const socket = new WebSocket('ws://localhost:8080');
 
       function display(form){
+        socket.onopen = function(){
         alert(form.message.value);
+        };
       }
   </script>
 <form>
