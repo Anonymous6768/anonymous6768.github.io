@@ -2,7 +2,7 @@
 <body>
   <div id="messages"></div>
   <script>
-      var socket = new WebSocket("ws://echo.websocket.org/");
+      var socket = new WebSocket("ws://localhost:8080");
         socket.onopen = function (e){
         alert("Connected");
         };
