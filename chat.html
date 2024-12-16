@@ -3,12 +3,9 @@
   <div id="messages"></div>
   <script>
       const socket = new WebSocket('ws://localhost:8080');
-
-      function display(form){
         socket.onopen = function (event){
-        alert(form.message.value);
+        alert("Connected");
         };
-      }
   </script>
 <form>
 <input type="text" id="input" name="message"/><br><br>
@@ -18,5 +15,6 @@
   display(this.form);'/>
 </form>
   <script src="/socket.io/socket.io.js"></script>
+  <script src="server.js"></script>
 </body>
 </html>
