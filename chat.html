@@ -2,7 +2,7 @@
 <body>
   <div id="messages"></div>
   <script>
-      var socket = new WebSocket(((window.location.protocol === "https:") ? "wss://" : "ws://") + window.location.host + "/ws");
+      var socket = new WebSocket("ws://echo.websocket.org/");
         socket.onopen = function (e){
         alert("Connected");
         };
@@ -14,7 +14,6 @@
   document.getElementById("messages").innerHTML += "<br>";
   display(this.form);'/>
 </form>
-  <script src="/socket.io/socket.io.js"></script>
   <script src="server.js"></script>
 </body>
 </html>
