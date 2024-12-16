@@ -5,10 +5,11 @@
       const socket = new WebSocket('ws://localhost:8080');
 
       function display(form){
-        socket.onopen = function(){
         alert(form.message.value);
-        };
       }
+    socket.onopen = function display(form){
+        alert("Message sent");
+        };
   </script>
 <form>
 <input type="text" id="input" name="message"/><br><br>
