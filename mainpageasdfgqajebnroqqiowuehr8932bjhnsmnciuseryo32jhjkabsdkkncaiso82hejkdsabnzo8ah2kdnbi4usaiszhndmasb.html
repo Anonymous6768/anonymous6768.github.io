@@ -8,7 +8,32 @@
     img {
       border-radius: 50%;
     }
+    #img1{
+  object-position: x y;
+}
+    #img2{
+  object-position: a b;
+}
   </style>
+<script>
+   const a1 = 'yellow.jpeg';
+    const image1 = document.getElementById("image1");
+    image1.src = a1;
+  const a2 = 'red.jpg';
+    const image2 = document.getElementById("image2");
+    image2.src = a1;
+  var x = "100px";
+  var y = "200px";
+
+  let img1 = document.querySelector("#image1");
+
+  img1.style.objectPosition = `${x} ${y}`
+  var a = "300px";
+  var b = "400px";
+  let img2 = document.querySelector("#image2");
+
+  img2.style.objectPosition = `${a} ${b}`
+</script>
 </head>
 <body>
   <nav class="navbar">
@@ -182,6 +207,10 @@
     <h1>Anonymous Games</h1>
     <h2>Updates Underway</h2>
   </div>
+    <div class="picture_slideshow">
+      <img src="" id="image1" style="width:265px;height:256px;">
+       <img src="" id="image2" style="width:265px;height:256px;">
+    </div>
   <div class="main_img">
     <img src="unnamed.png" style="width:265px;height:256px;">
   </div>
