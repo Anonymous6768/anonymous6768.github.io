@@ -8,25 +8,17 @@
     img {
       border-radius: 50%;
     }
-    #img1{
-  object-position: x1 y1;
-}
-    #img2{
-  object-position: x2 y2;
-}
   </style>
 <script>
-    const image1 = document.getElementById("image1");
-    const image2 = document.getElementById("image2");
   var x1 = "350px";
   var y1 = "256px";
 
-  let img1 = document.querySelector("#image1");
+  let img1 = document.document.getElementById("image1");
 
   img1.style.objectPosition = `${x1} ${y1}`
   var x2 = "606px";
   var y2 = "256px";
-  let img2 = document.querySelector("#image2");
+  let img2 = document.getElementById("image2");
 
   img2.style.objectPosition = `${x2} ${y2}`
     for(i=1; i<999; i++){
