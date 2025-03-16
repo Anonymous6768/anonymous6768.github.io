@@ -21,24 +21,31 @@
     image1.src = a1;
   const a2 = 'red.jpg';
     const image2 = document.getElementById("image2");
-    image2.src = a1;
-  var x = "100px";
-  var y = "200px";
+    image2.src = a2;
+  var x1 = "256px";
+  var y1 = "256px";
 
   let img1 = document.querySelector("#image1");
 
-  img1.style.objectPosition = `${x} ${y}`
-  var a = "300px";
-  var b = "400px";
+  img1.style.objectPosition = `${x1} ${y1}`
+  var x2 = "512px";
+  var y2 = "256px";
   let img2 = document.querySelector("#image2");
 
-  img2.style.objectPosition = `${a} ${b}`
+  img2.style.objectPosition = `${x2} ${y2}`
   function animate(){
-    for(i=0; i<999; i++){
+    for(i=1; i<999; i++){
       if(i % 2 === 0){
-        x=x-100
+        x1=x1+256;
+        y1=y1+256;
+        x2=x2-256;
+        y2=y2-256;
       }
       else{
+        x1=x1-256;
+        y1=y1-256;
+        x2=x2+256;
+        y2=y2+256;
       }
     }
   }
