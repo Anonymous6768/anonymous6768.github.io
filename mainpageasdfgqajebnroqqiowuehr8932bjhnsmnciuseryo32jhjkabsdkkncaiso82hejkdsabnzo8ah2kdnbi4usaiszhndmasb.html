@@ -8,34 +8,27 @@
     img {
       border-radius: 50%;
     }
-  </style>
-<script>
-  var x1 = "350px";
-  var y1 = "256px";
-
-  let img1 = document.document.getElementById("image1");
-
-  img1.style.objectPosition = `${x1} ${y1}`
-  var x2 = "606px";
-  var y2 = "256px";
-  let img2 = document.getElementById("image2");
-
-  img2.style.objectPosition = `${x2} ${y2}`
-    for(i=1; i<999; i++){
-      if(i % 2 === 0){
-        x1=x1+256;
-        y1=y1+256;
-        x2=x2-256;
-        y2=y2-256;
-      }
-      else{
-        x1=x1-256;
-        y1=y1-256;
-        x2=x2+256;
-        y2=y2+256;
-      }
+    @keyframes animation1 {
+    0% {left: 256px; top: 256px;}
+    100% {left: 512px; top: 256px;}
     }
-</script>
+    @keyframes animation2 {
+    0% {left: 512px; top: 256px;}
+    100% {left:256px; top:256px;}
+    }
+    image1 {
+      position: relative;
+      animation-name: animation1;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    image2 {
+      position: relative;
+      animation-name: animation2;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -211,7 +204,7 @@
   </div>
     <div class="image_slideshow">
       <img src="yellow.jpeg" id="image1" style="width:265px;height:256px;">
-       <img src="red.jpg" id="image2" style="width:265px;height:256px;">
+      <img src="red.jpg" id="image2" style="width:265px;height:256px;">
     </div>
   </div>
   </div>
