@@ -9,10 +9,10 @@
       border-radius: 50%;
     }
     #img1{
-  object-position: x y;
+  object-position: x1 y1;
 }
     #img2{
-  object-position: a b;
+  object-position: x2 y2;
 }
   </style>
 <script>
@@ -29,7 +29,6 @@
   let img2 = document.querySelector("#image2");
 
   img2.style.objectPosition = `${x2} ${y2}`
-  function animate(){
     for(i=1; i<999; i++){
       if(i % 2 === 0){
         x1=x1+256;
@@ -44,7 +43,6 @@
         y2=y2+256;
       }
     }
-  }
 </script>
 </head>
 <body>
