@@ -1,21 +1,21 @@
 @keyframes animation1 {
-    0% {left: 512px; top: 128px;}
-    100% {left: 768px; top: 128px;}
+    0% {left: 600px; top: 128px;}
+    100% {left: 800px; top: 128px;}
 }
 @keyframes animation2 {
-    0% {left: 768px; top: 128px;}
-    100% {left:512px; top: 128px;}
+    0% {left: 800px; top: 128px;}
+    100% {left:600px; top: 128px;}
 }
 .image1 {
       position: relative;
       animation-name: animation1;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
 }
 .image2 {
       position: relative;
       animation-name: animation2;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
 }
 .navbar {
