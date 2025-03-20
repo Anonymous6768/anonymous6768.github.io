@@ -1,9 +1,9 @@
 @keyframes animation1 {
-    0% {right: 0px}
+    0% {left: 0px}
     100% {left: 200px}
 }
 @keyframes animation2 {
-    0% {left: 0px}
+    0% {right: 0px}
     100% {right: 200px}
 }
 .image1 {
