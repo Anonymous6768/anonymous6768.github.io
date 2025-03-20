@@ -1,10 +1,10 @@
 @keyframes animation1 {
-    0% {left: 0px}
-    100% {left: 200px}
+    0% {left: 0px; width: 25px; height: 25px;}
+    100% {left: 200px; width: 175px; height: 175px;}
 }
 @keyframes animation2 {
-    0% {right: 0px}
-    100% {right: 200px}
+    0% {right: 0px; width: 175px; height: 175px;}
+    100% {right: 200px; width: 25px; height: 25px;}
 }
 .image1 {
       position: relative;
