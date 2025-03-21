@@ -2,13 +2,29 @@
 <html lang="en"> <head>
   <link rel="stylesheet" href="styles.css">
   <style>
-    li {
-    float: left;
-    }
     img {
       border-radius: 50%;
     }
   </style>
+  <script>
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                const star1 = document.createElement('div');
+                star1.className = 'star1';
+                const star1X = Math.random() * 1920;
+                const star1Y = Math.random() * 1080;
+                star1.style.left = star1X;
+                star1.style.top = star1Y;
+                document.body.appendChild(star1);
+                const star2 = document.createElement('div');
+                star2.className = 'star2';
+                const star2X = Math.random() * 1920;
+                const star2Y = Math.random() * 1080;
+                star2.style.left = star2X;
+                star2.style.top = star2Y;
+                document.body.appendChild(star2);
+                let distance1X = Math.sqrt(Math.pow(mouseX - star1X, 2) + Math.pow(mouseY - star1Y, 2));
+  </script>
 </head>
 <body>
   <nav class="navbar">
