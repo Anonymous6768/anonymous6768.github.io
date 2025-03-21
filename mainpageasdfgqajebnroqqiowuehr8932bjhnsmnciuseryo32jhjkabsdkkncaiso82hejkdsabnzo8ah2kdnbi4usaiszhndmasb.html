@@ -24,6 +24,9 @@
                 star2.style.top = star2Y;
                 document.body.appendChild(star2);
                 let distance1 = Math.sqrt(Math.pow(mouseX - star1X, 2) + Math.pow(mouseY - star1Y, 2));
+                let distance2 = Math.sqrt(Math.pow(mouseX - star2X, 2) + Math.pow(mouseY - star2Y, 2));
+                const set = [distance1, distance2];
+                const leastDistance = Math.min(set);
   </script>
 </head>
 <body>
