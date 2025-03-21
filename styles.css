@@ -12,11 +12,13 @@
     width: 3px;
     height: 3px;
     color: white;
+    border-radius: 50%;
 }
 .star2 {
     width: 3px;
     height: 3px;
     color: white;
+    border-radius: 50%;
 }
 .image1 {
       position: relative;
